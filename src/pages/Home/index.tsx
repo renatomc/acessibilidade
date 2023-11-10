@@ -9,12 +9,15 @@ export function Home() {
 
   return  (
     <MainContainer>
-      <Button onClick={() => {
-        setIsOpenModal(true)
-      }}>
+      <Button 
+        onClick={() => {
+          setIsOpenModal(true)
+        }}
+        aria-label="Botão abrir modal de feedback"
+      >
         Abrir Modal
       </Button>
-      <Modal isOpen={isOpenModal} setIsOpen={setIsOpenModal}>
+      <Modal isOpen={isOpenModal} setIsOpen={setIsOpenModal} aria-label="Modal com formulário de feedback">
         <FormFeedback />
       </Modal>
     </MainContainer>
